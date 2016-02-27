@@ -10,6 +10,7 @@ while True:
 	 	data=conn.recv(1024)
 	 	if not data:
 			break
-		conn.send(data)
 	if data == "close":
 		conn.close()
+	else:
+		conn.send(data)
