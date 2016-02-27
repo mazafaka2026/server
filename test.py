@@ -5,7 +5,7 @@ s.bind(("0.0.0.0", 2222))
 s.listen(5)
 while True:
 	conn, addr = s.accept()
-	if data is "close":
+	if data == "close":
 	 conn.close()
 	else:
 	 while True:
