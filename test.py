@@ -2,7 +2,7 @@ print "helo"
 import socket
 data=0
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(("0.0.0.0", 2222))
+s.bind(("", 2222))
 s.listen(5)
 while True:
 	conn, addr = s.accept()
