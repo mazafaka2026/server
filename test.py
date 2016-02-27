@@ -14,4 +14,5 @@ while True:
 	 	if not data:
 		 break
 		conn.send(data)
-	 conn.close()
+		if data == "close":
+	          conn.close()
