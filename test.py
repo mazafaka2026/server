@@ -6,13 +6,10 @@ s.bind(("0.0.0.0", 2222))
 s.listen(5)
 while True:
 	conn, addr = s.accept()
-	if data == "close":
-	 conn.close()
-	else:
 	 while True:
 	 	data=conn.recv(1024)
 	 	if not data:
-		 break
+			break
 		conn.send(data)
-		if data == "close":
-	          conn.close()
+	if data == "close":
+		conn.close()
